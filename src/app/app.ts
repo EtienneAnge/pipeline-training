@@ -8,3 +8,5 @@ import { Component, signal } from '@angular/core';
 export class App {
   protected readonly title = signal('World');
 }
+
+let x = 1;
