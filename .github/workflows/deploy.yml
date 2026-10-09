@@ -34,8 +34,10 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Installer les dépendances
+      - name: Package install
         run: npm ci
+      - name: run unit test
+        run: npx ng test --watch=false --browsers=ChromeHeadless
 
       - name: Build Angular
         run: npx ng build --base-href /${{ github.event.repository.name }}/
